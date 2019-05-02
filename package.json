@@ -24,5 +24,13 @@
     "mongoose": "^5.3.16"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maalbaneze/GoogleBooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maalbaneze/GoogleBooks/issues"
+  },
+  "homepage": "https://github.com/maalbaneze/GoogleBooks#readme",
   "description": ""
 }
