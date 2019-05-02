@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// Imports to build the web page using api routes and the book list
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Book from "../components/Book";
@@ -6,16 +7,16 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
-
+// Class set for the Saved page with intoial state as an empty array
 class Saved extends Component {
   state = {
     books: []
   };
-
+  // Runs app and call for getting saved books function below 
   componentDidMount() {
     this.getSavedBooks();
   }
-
+  // Function to get saved books
   getSavedBooks = () => {
     API.getSavedBooks()
       .then(res =>
@@ -25,11 +26,11 @@ class Saved extends Component {
       )
       .catch(err => console.log(err));
   };
-
+  // Function to delete a book
   handleBookDelete = id => {
     API.deleteBook(id).then(res => this.getSavedBooks());
   };
-
+  // React render function to build the page lements to search for, save and delete a book
   render() {
     return (
       <Container>
@@ -69,8 +70,8 @@ class Saved extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 className="text-center">No Saved Books</h2>
-              )}
+                  <h2 className="text-center">No Saved Books</h2>
+                )}
             </Card>
           </Col>
         </Row>
@@ -79,5 +80,5 @@ class Saved extends Component {
     );
   }
 }
-
+// Exports
 export default Saved;

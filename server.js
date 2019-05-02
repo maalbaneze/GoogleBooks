@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 }
 //Tells our app to use the routes we have in routes folder
 app.use(routes);
-// Connect to the mongoose server on our computer in a database named "googlebooks"
+// Connect to the mongoose server for our database named "googlebooks" with our user info
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://michael:UWcbc2019@ds125871.mLab.com:25871/heroku_0xn0jnk7",
   {

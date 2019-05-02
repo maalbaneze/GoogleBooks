@@ -1,8 +1,9 @@
+// Requires Axios and models folder
 const axios = require("axios");
 const db = require("../models");
-
+// Exports as a module Read operations with Axios and compares results to MongoDB
 module.exports = {
-  findAll: function(req, res) {
+  findAll: function (req, res) {
     const { query: params } = req;
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {

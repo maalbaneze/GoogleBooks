@@ -1,5 +1,5 @@
 import React from "react";
-
+// Function for building a form that listens for user inputs via handleInputChange and accepts input from the user via handleFormSubmit.  Has a default value of "Ready Player One" 
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>
@@ -30,5 +30,5 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
     </form>
   );
 }
-
+// Exports
 export default Form;

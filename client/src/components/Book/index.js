@@ -2,7 +2,7 @@ import React from "react";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 import "./style.css";
-
+// Function for our book entries and their display
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
     <ListItem>
@@ -36,5 +36,5 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
     </ListItem>
   );
 }
-
+// Exports
 export default Book;

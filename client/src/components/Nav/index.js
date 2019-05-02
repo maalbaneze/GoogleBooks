@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-
+// Sets a class Nav extending the React Component and sets initial state
 class Nav extends Component {
   state = {
     open: false,
     width: window.innerWidth
   };
-
+  // Arow function to shape the page window
   updateWidth = () => {
     const newState = { width: window.innerWidth };
 
@@ -17,19 +17,19 @@ class Nav extends Component {
 
     this.setState(newState);
   };
-
+  // Arrow function to change page navigation
   toggleNav = () => {
     this.setState({ open: !this.state.open });
   };
-
+  // Listener function for running the app
   componentDidMount() {
     window.addEventListener("resize", this.updateWidth);
   }
-
+  // Listener function for starting the app
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateWidth);
   }
-
+  // Render as part of React the page with Google Books, Saved and Search elements
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
@@ -73,5 +73,5 @@ class Nav extends Component {
     );
   }
 }
-
+// Exports
 export default Nav;

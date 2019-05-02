@@ -1,7 +1,8 @@
 import React from "react";
+// Imnports to build the page
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
-
+// Function for when a book search yields no result with a 404 error message
 function NoMatch() {
   return (
     <Container fluid>
@@ -20,5 +21,5 @@ function NoMatch() {
     </Container>
   );
 }
-
+// Exports
 export default NoMatch;

@@ -1,5 +1,5 @@
 import React from "react";
-
+// Function for building a card on the web page
 function Card({ icon, title, children }) {
   return (
     <div className="card mt-4">
@@ -14,5 +14,5 @@ function Card({ icon, title, children }) {
     </div>
   );
 }
-
+// Exports
 export default Card;

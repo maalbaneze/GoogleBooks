@@ -1,3 +1,5 @@
+// Homepage that imports all the page elements to build including the list of books via routes in api folder
+
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
@@ -14,7 +16,7 @@ class Home extends Component {
     q: "",
     message: "Search For A Book To Begin!"
   };
-
+  // React listener function for user input 
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -36,12 +38,12 @@ class Home extends Component {
         })
       );
   };
-
+  // React function to submit
   handleFormSubmit = event => {
     event.preventDefault();
     this.getBooks();
   };
-
+  // Function for adding a book to the saved element of the page
   handleBookSave = id => {
     const book = this.state.books.find(book => book.id === id);
 
@@ -55,7 +57,7 @@ class Home extends Component {
       image: book.volumeInfo.imageLinks.thumbnail
     }).then(() => this.getBooks());
   };
-
+  // React render function to builf the web page to search for and save books 
   render() {
     return (
       <Container>
@@ -104,8 +106,8 @@ class Home extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 className="text-center">{this.state.message}</h2>
-              )}
+                  <h2 className="text-center">{this.state.message}</h2>
+                )}
             </Card>
           </Col>
         </Row>
@@ -114,5 +116,5 @@ class Home extends Component {
     );
   }
 }
-
+// Exports
 export default Home;

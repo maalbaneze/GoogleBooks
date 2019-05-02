@@ -1,5 +1,5 @@
 import React from "react";
-
+// Function for building the web page footer
 function Footer() {
   return (
     <footer>
@@ -10,5 +10,5 @@ function Footer() {
     </footer>
   );
 }
-
+// Exports
 export default Footer;
