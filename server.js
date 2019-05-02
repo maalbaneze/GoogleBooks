@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 // Connect to the mongoose server on our computer in a database named "googlebooks"
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/googlebooks",
+  process.env.MONGODB_URI || "mongodb://michael:UWcbc2019@ds125871.mLab.com:25871/heroku_0xn0jnk7",
   {
     useCreateIndex: true,
     useNewUrlParser: true
